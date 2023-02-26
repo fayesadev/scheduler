@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"; 
+import React from "react"; 
 import "./styles.scss";
 import Header from "./Header";
 import Show from "./Show";
@@ -21,7 +21,7 @@ export default function Appointment(props) {
       {mode === EMPTY && <Empty onAdd={() => transition(CREATE)} />}
       {mode === CREATE && (
         <Form 
-          interviewers={[]} 
+          interviewers={props.interviewers} 
           onSave={()=>console.log("saved")}
           onCancel={back}
         />
