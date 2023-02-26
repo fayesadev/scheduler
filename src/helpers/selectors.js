@@ -22,4 +22,17 @@ export function getAppointmentsForDay(state, day) {
   };
 
   return final;
+};
+
+export function getInterview(state, interview) {
+  if (!interview) {
+    return null;
+  }
+
+  const id = interview.interviewer;
+  const interviewerData = state.interviewers[id];
+
+  interview.interviewer = interviewerData;
+
+  return interview;
 }
