@@ -29,12 +29,7 @@ export function getInterview(state, interview) {
     return null;
   }
 
-  const id = interview.interviewer;
-  const interviewerData = state.interviewers[id];
-
-  interview.interviewer = interviewerData;
-
-  return interview;
+  return {...interview, interviewer: state.interviewers[interview.interviewer]};
 }
 
 export function getInterviewersForDay(state, day) {
