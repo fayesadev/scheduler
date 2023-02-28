@@ -41,7 +41,7 @@ export default function Appointment(props) {
       transition(ERROR_SAVE, true);
     })
   };
-  //BUG: after error message, clicking close goes back to deleting status
+
   const cancel = function() {
     transition(DELETING, true);
 
@@ -70,14 +70,14 @@ export default function Appointment(props) {
       {mode === ERROR_SAVE && (
         <Error 
           message="Oops! It didn't save. Please try again later." 
-          onClose={() => back()}
+          onClose={back}
         />
       )}
       {mode === DELETING && <Status message="Deleting..." />}
       {mode === ERROR_DELETE && (
         <Error
           message="Oops! It didn't delete. Please try again later."
-          onClose={() => back()}
+          onClose={back}
         />
       )}
       {mode === CONFIRM && (
@@ -90,7 +90,7 @@ export default function Appointment(props) {
         <Show
           student={props.interview.student}
           interviewer={props.interview.interviewer}
-          onEdit={() => {transition(EDIT)}}
+          onEdit={() => transition(EDIT)}
           onDelete={() => transition(CONFIRM)}
         />
       )}
