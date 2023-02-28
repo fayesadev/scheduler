@@ -51,11 +51,12 @@ export default function Application(props) {
     .then((res) => {
       setState({...state, appointments});
       return res.status
-    })
+    });
     
   };
 
-  //Bugs to fix
+  //Bugs to fix: saving an empty name or interviewer crashes the page
+  // spots remaining in daylist isnt updated in realtime, has to refresh first
   const cancelInterview = function(id) {
 
     const appointment = {
@@ -73,7 +74,7 @@ export default function Application(props) {
       setState({...state, appointments});
       return res.status
     });
-  }
+  };
 
   const schedule = dailyAppointments.map((appointment) => {
     const interview = getInterview(state, appointment.interview);
