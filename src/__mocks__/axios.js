@@ -82,28 +82,16 @@ export default {
   }),
 
   put: jest.fn(url => {
-    if (url === "/api/days") {
-      return Promise.resolve({
-        status: 200,
-        statusText: "OK",
-        data: fixtures.days
-      });
-    }
+    return Promise.resolve({
+      status: 200,
+      statusText: "OK",
+    });
+  }),
 
-    if (url === "/api/appointments") {
-      return Promise.resolve({
-        status: 200,
-        statusText: "OK",
-        data: fixtures.appointments
-      })
-    }
-
-    if (url === "/api/interviewers") {
-      return Promise.resolve({
-        status:200,
-        statusText: "OK",
-        data: fixtures.interviewers
-      })
-    } 
+  delete: jest.fn(url => {
+    return Promise.resolve({
+      status: 200,
+      statusText: "OK",
+    });
   })
 }
