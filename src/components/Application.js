@@ -1,14 +1,11 @@
 import React from "react";
-import "components/Application.scss";
+import "components/styles/Application.scss";
 import DayList from "components/DayList";
 import Appointment from "components/Appointment";
 import { getAppointmentsForDay, getInterview, getInterviewersForDay } from "helpers/selectors";
 import useApplicationData from "hooks/useApplicationData";
 
 export default function Application(props) {
-  //Bugs to fix: saving an empty name or interviewer crashes the page
-  // spots remaining in daylist isnt updated in realtime, has to refresh first
-
   const {
     state,
     setDay,

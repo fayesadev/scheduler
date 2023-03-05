@@ -11,6 +11,7 @@ export default function useApplicationData(props) {
 
   const setDay = day => setState({...state, day});
 
+  // Gets days, appointments and interviewers data from API call
   useEffect(()=> {
     const daysURL = '/api/days';
     const appointmentsURL = '/api/appointments';
@@ -26,6 +27,7 @@ export default function useApplicationData(props) {
     })
   }, []);
 
+  // Sets state of updated number of spots remaining for Day List
   const updateSpots = function(state, appointments, id) {
     const dayObj = state.days.find(d => d.name === state.day);
 
@@ -42,6 +44,7 @@ export default function useApplicationData(props) {
     return state.days.map(d => d.name === state.day ? day : d)
   }
 
+  //Makes a put request and sets state when user books an interview
   const bookInterview = function(id, interview) {
 
     const appointment = {
@@ -65,6 +68,7 @@ export default function useApplicationData(props) {
     
   };
 
+  //Makes a delete request and set state when user cancels or destroys an interview
   const cancelInterview = function(id) {
 
     const appointment = {

@@ -87,8 +87,6 @@ describe("Application", () => {
     );
 
     expect(getByText(day, "2 spots remaining")).toBeInTheDocument();
-
-    // debug();
   });
 
   it("loads data, edits an interview and keeps the spots remaining for Monday the same", async() => {
@@ -133,9 +131,6 @@ describe("Application", () => {
     );
 
     expect(getByText(day, "1 spot remaining")).toBeInTheDocument();
-
-    // debug();
-
   });
 
   it("shows the save error when failing to save an appointment", async() => {
@@ -175,8 +170,6 @@ describe("Application", () => {
 
     //9. Check if form renders with placeholder Enter Student Name
     expect(getByPlaceholderText(appointment, "Enter Student Name")).toBeInTheDocument();
-
-    // debug()
   });
 
   it("shows the delete error when failing to delete an existing appointment", async() => {
@@ -214,7 +207,5 @@ describe("Application", () => {
 
     //9. Check if appointment renders with Archie Cohen displayed (did not delete)
     expect(getByText(appointment, "Archie Cohen")).toBeInTheDocument();
-
-    debug();
   })
 });

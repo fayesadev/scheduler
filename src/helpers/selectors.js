@@ -1,3 +1,5 @@
+// Selector functions to get appointments or interviewers for a specified day and gets the interview object
+
 export function getAppointmentsForDay(state, day) {
   if (state.days.length === 0) {
     return [];

@@ -34,7 +34,7 @@ export default function Appointment(props) {
 
     props.bookInterview(props.id, interview)
     .then(() => {
-      // console.log("res", res)
+
       transition(SHOW)
     })
     .catch(error => {
@@ -47,7 +47,7 @@ export default function Appointment(props) {
 
     props.cancelInterview(props.id)
     .then(() => {
-      // console.log("res", res);
+;
       transition(EMPTY);
     })
     .catch(error => {

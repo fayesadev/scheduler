@@ -1,6 +1,5 @@
 import { renderHook, act } from "@testing-library/react-hooks";
 import { getAppointmentsForDay } from "helpers/selectors";
-// import { setDay, updateSpots, bookInterview, cancelInterview } from "hooks/useApplicationData";
 
 const updateSpots = function(state, day) {
   const appointments = getAppointmentsForDay(state, day);

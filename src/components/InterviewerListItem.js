@@ -1,6 +1,6 @@
 import React from "react";
 import classNames from "classnames";
-import "components/InterviewerListItem.scss";
+import "components/styles/InterviewerListItem.scss";
 
 export default function InterviewerListItem(props) {
 
