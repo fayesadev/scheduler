@@ -13,7 +13,7 @@ Adding an appointment
 Editing an existing appointment
 !["GIF of editing an existing appointment"](https://github.com/fayesadev/scheduler/blob/master/docs/scheduler-edit.gif)
 
-Display error message if server has errors
+Error message display
 !["GIF of server error message"](https://github.com/fayesadev/scheduler/blob/master/docs/scheduler-error.gif)
 
 ## Setup
